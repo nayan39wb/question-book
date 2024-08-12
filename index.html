@@ -1,0 +1,373 @@
+ 
+<html>
+ 
+<head>
+        <title>Question book </title>
+         
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    
+    
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+ 
+ 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+		<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+		<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+		 
+		 
+		 <style>
+         
+              *{
+	margin:0;
+	padding:0;
+}
+body{
+	background:#eba426;	
+	color:#444;
+	font-size:12px;
+	color: #333;
+    font-family: 'Oswald', sans-serif;
+}
+ 
+ 
+.booklet           {
+	width:900px;
+	height:607px;
+	position:relative;
+	margin:0 auto 10px;
+	-moz-box-shadow:0px 0px 1px #fff;
+	-webkit-box-shadow:0px 0px 1px #fff;
+	box-shadow:0px 0px 1px #fff;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+.booklet .b-wrap-left  {
+	background:#fff url(images/left_bg.jpg) no-repeat top left;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.booklet .b-wrap-right {
+	background:#efefef url(images/right_bg.jpg) no-repeat top left;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.booklet .b-counter {
+	bottom:10px;
+	position:absolute;
+	display:block;
+	width:90%;
+	height:20px;
+	border-top:1px solid #ddd;
+	color:#222;
+	text-align:center;
+	font-size:12px;
+	padding:5px 0 0;
+	background:transparent;
+	-moz-box-shadow:0px -1px 1px #fff;
+	-webkit-box-shadow:0px -1px 1px #fff;
+	box-shadow:0px -1px 1px #fff;
+	opacity:0.8;
+}
+.book_wrapper{
+	margin:0 auto;
+	padding-top:50px;
+	width:905px;
+	height:540px;
+	position:relative;
+	background:transparent url(images/bg.png) no-repeat 9px 27px;
+}
+.book_wrapper h1{
+	color:orange;
+	margin:5px 5px 5px 15px;
+	font-size:24px;
+	background:transparent url(images/h1.png) no-repeat bottom left;
+	padding-bottom:7px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.book_wrapper p{
+	font-size:15px;
+	margin:5px 5px 5px 15px;
+}
+.book_wrapper a.article,
+.book_wrapper a.demo{
+	background:transparent url(images/circle.png) no-repeat 50% 0px;
+	display:block;
+	width:95px;
+	height:41px;
+	text-decoration:none;
+	outline:none;
+	font-size:16px;
+	color:#555;
+	float:left;
+	line-height:41px;
+	padding-left:47px;
+}
+.book_wrapper a.demo{
+	margin-left:50px;
+}
+.book_wrapper a.article:hover,
+.book_wrapper a.demo:hover{
+	background-position:50% -41px;
+	color:#13386a;
+}
+.book_wrapper img{
+	margin:10px 0px 5px 35px;
+	width:300px;
+	padding:4px;
+	border:1px solid #ddd;
+	-moz-box-shadow:1px 1px 1px #fff;
+	-webkit-box-shadow:1px 1px 1px #fff;
+	box-shadow:1px 1px 1px #fff;
+}
+.booklet .b-wrap-right img{
+	border:1px solid #E6E3C2;
+}
+a#next_page_button,
+a#prev_page_button{
+	display:none;
+	position:absolute;
+	width:41px;
+	height:40px;
+	cursor:pointer;
+	margin-top:-20px;
+	top:50%;
+	background:transparent url(images/buttons.png) no-repeat 0px -40px;
+}
+a#prev_page_button{
+	left:-30px;
+}
+a#next_page_button{
+	right:-30px;
+	background-position:-41px -40px;
+}
+a#next_page_button:hover{
+	background-position:-41px 0px;
+}
+a#prev_page_button:hover{
+	background-position:0px 0px;
+}
+ 
+    
+    
+         </style>
+		 
+    </head>
+    <body>
+    <br><br><br><br><br>
+		 
+		<div class="book_wrapper">
+			<a id="next_page_button"></a>
+			<a id="prev_page_button"></a>
+			 
+			<div id="mybook" style="display:none;">
+				<div class="b-load">
+					<div>
+						<img src="images/1.jpg" alt=""/>
+						<h1>jab ladai hua tha  i think 21 july ko tb tum questions puchi thi kuch uska hi answer hai ....</h1>
+						<p></p>
+						<a href="" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/2.jpg" alt="" />
+						<h1>parents ka pyar ?</h1>
+						<p>Dekho tumhare ghr ke parents ka pyar tmhe jitna mil rha hai but i promise ki shadhi ke baad tmko haad se jada pyar melega 
+							jo bhi pyar ka kami hua hai ghr pe ya bachpan meh sb fullfil hoga i promise 
+							bs ek baar trust krke raho ... dekhna tmko parents ka pyar dilwa kr rahenge pakka  .</p>
+						<a href="" target="_blank" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/3.jpg" alt="" />
+						<h1>kbhi cheat nhi kroge ?</h1>
+						<p>Dekho jaan yeah toh tmko bhi pta hai ki haad se jada pyar krne lge hai yrr abhi kbhi cheat nhi krenge promise hai yrr ...
+							kassam khud ka kbhi agar kr diye n chale jayenge sbse durr duniya choor kr lekin tmhare sth galat nhi krenge yrr kbhi mummy ke baad ka 
+							place diye hai jaan tmko. So abh batao na kaise himmat krenge yrr tmko choor kr jaane ka love uhh baccha yrr bhaut pyar krte hai nhi jaana durr 
+							....</p>
+						<a href="" target="_blank" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/4.jpg" alt="" />
+						<h1>hum tmhare insecurities and trust ka answer denge mera ka ky ?</h1>
+						<p>Dekho relationship dono ka hai dono ko ek dusre ko samjhna and doubt clear krna farz hai n.. I know tum 
+							bhaut jada efforts dalti ho but hum bhi krenge jaan ..  
+							love uhh forever ..
+							tension free raho kbhi galat nhi krenge tmhare sth.. jaan trust kr lo na hum hamesha sth rahenge yrr 
+							haar problem meh ..jaha koi nhi rahega n woha tk hum sth rahenge forever ..❤️
+
+						</p>
+						<a href="" target="_blank" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/5.jpg" alt="" />
+						<h1>ky trust hai ki sb promise fake nhi hai?</h1>
+						<p>Dekho jaan fake nhi hai yrr koi bhi promise mera pakka yrr ..
+							Tum test le skti ho kaise bhi abh bs tum hi chaiye baccha baki koi nhi yrr 
+							hum tmhare hai bs yrrr please rakh lo n koi bhi issue hoga sth mil kr n solve krenge n jaan 
+							Bolo toh next year shadhi krke prove bhi kr denge yrr ki hum timepass nhi the pakka pyar krte hai yrr 😭
+							🥺
+							.</p>
+						<a href="" class=""></a>
+						<a href="" class=""></a>
+					</div>
+					<div>
+						<img src="images/6.jpg" alt="" />
+						<h1>ky trust hai ki kisi aur se baat nhi kr rhe ?</h1>
+						<p>Jaise chaho aap test le skte ho ki hum kisi aur se baat nhi kr rhe hai apke alawa....
+							and agar krte bhi hai toh bs bhen hi hai sb yrr pakka promise kbhi nhi krenge cheat trust kr lo na please.
+							 hum hamesha sth hai yrr aur rahenge bhi 🥺
+							 .</p>
+						<p.</p>
+						<a href="" class=""></a>
+						<a href="" class=""></a>
+					</div>
+					<div>
+						<img src="images/7.jpg" alt="" />
+						<h1>ky trust hai ki loyal ho ?</h1>
+						<p>Apko belive hai n ki hum loyal hai apke sth then ....
+							agar aur tb bhi trust nhi ho toh bolo hum haar woh chiz krne ko ready hai jisse apko trust ho ...
+							kuch bhi kr lo hum nhi jayenge choor kr bs ...
+							kaise bhi rakho hum rahenge bs abh apka pyar , love,care,attention chaiye 
+							 please rakh lo na apne sth mt n kro durr .</p>
+						<a href="" class=""></a>
+						<a href="" class=""></a>
+					</div>
+					<div>
+						<img src="images/8.jpg" alt="" />
+						<h1>ky trust hai ki you can handle me ?</h1>
+						<p>I promise ki i can handle you ..
+							jaise apka periods meh khyal rakhte hai waisa hi hamesha rakhenge 
+							uss basis pe toh aapko trust hoga na ki i can handle you forever 
+							bhaut wish and  pyar kiye hai and en sb ke baad bhi agar apko handle ya khush nhi rakh payenge tb bolna aap mam
+							Abhi toh chance do na mam ...
+							i promise i do best ache se khyal rakhenge Rani jaise bs ek chance chaiye baccaha .</p>
+						<a href="" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/9.jpg" alt="" />
+						<h1>hmko kisi pe bhi trust nhi raha toh ky dila paoge ?</h1>
+						<p>Yrr apko mere se n mtlb hai hum n rahenge sth then baki sb ka kyu sochna ..
+							Sbke trust se apko ky kaam mam ?
+							but hn agar waisa kbhi chance hua toh I promise hum sth khade rahenge and apka trust dubara sb log pe banne ke liye sth mil kr help krenge  
+							i know yeah thoda muskil hai but i promise hum sth khade rahenge promise my love...</p>
+						<a href="" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/10.jpg" alt="" />
+						<h1>mere parents nhi manege ka hai toh what if you parents deny</h1>
+						<p>Dekho parents apke ho ya mere ho ...
+							Jab rishta banye hai toh yeah farz hai n  ki last tk koshish krna hai manne ka ghr walo ko ..
+							and last tk maan hi jaate hai ghr wale baccho ki khushi ke liye ..
+							But if nhi mane hum bhagne ke liye ready hai but tum ready ho?
+							choor paogi sb kuch and mere sth jaa kr new se start kr paogi sb kuch ?
+							Shadhi hone ke baad hum ghr jayenge wapas tb accept kr lenge woh i  know but agar nhyi kiye toh i promise ki parents ka pyar hum denge apko pakka ...\
+							tum sb sunn klr reh paogi  n mere sth ki beti thi bhaag gyi , kisi ki nhi hogi yeah sb sunn kr reh paogi ?
+							.</p>
+						<a href="" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/11.jpg" alt="" />
+						<h1>Hum bss aryan ke sth smile kiye hai khud ka koi fake nhi woh chiz wapas laa paoge?</h1>
+						<p>Acha mtlb aryan ke sth aap khush rehte the and smile bhi krte the real wla ..
+							But jb mere sth rehte the toh woh smile real nhi hota tha ky ? woh sb smile fake tha ?
+							agar fake tha toh bol do i try ki jb bhi samne mile ya call pr apka real smile face pe laane ka ...
+							phele jaise abhi toh abh aap smile bhi nhi krte samne pta nhi kyu hurt hota hai but koi nhi soon sb sahi ho jaygea hum apna pura 100% koshish krenge bs aap sth dena .</p>
+						<a href="" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/12.png" alt="" />
+						<h1>mujhe apne terms pe life jeena hai independent hoke am i allowed ?</h1>
+						<p>Apke konse se terms ?
+							terms ky hai woh toh batao?
+							agar terms sahi rahe toh definetly you are allowed but agar waisa kuch arah jo sahi nhi hai toh hum mana krenge sorry for that but hum mana krenge kyuki tmhe abhi tk duniya nhi pta sahi se esliye 
+							and baat rha independent ho kr toh tum independent hi ho agar tumhe lgta hai mere decision barrier hai tmhare liye yaa rook tok jada krte hai toh bol skti ho hum sb chiz krna choor denge ...
+							bs jo hum krte the ya bolte the tmhare ache ke liye tha sorry agar jada hi rule kr diye the toh ..
+							apne terms bta dena intexar rahega and you are independent  fully ...</p>
+						<a href="" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/13.jpg" alt="" />
+						<h1>mujhe yeh realtionship meh equal efforts cahiye de paoge ?</h1>
+						<p>Hn de paunga lifetime forever jb tk huh sth tb tk efforts dunga .. equal se jada 
+							and agar kbhi nhi diya toh bta dena samjha dena hum smjh jayenge baccha pakka promise ..
+							love uhh my love forever💍
+							.</p>
+						<a href="" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+					<div>
+						<img src="images/14.jpg" alt="" />
+						<h1>will i be your last love ?</h1>
+						<p>Yes you will be my last and forever love ...
+							I promise shadhi bhi tmse hi hoga ,first sex bhi and baby bhi sb tmse hi rahega jaan ...
+							mt daro hum nhi ho rhe change mam dekhte jaao abh toh picha nhi choor rha kbhi promise 💍
+							..
+							Aur questions hai page khatam ho gya hai next book part 2 meh rahega .</p>
+						<a href="" class="article"></a>
+						<a href="" class="demo"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+        <script type="text/javascript">
+			$(function() {
+				var $mybook 		= $('#mybook');
+				var $bttn_next		= $('#next_page_button');
+				var $bttn_prev		= $('#prev_page_button');
+				var $loading		= $('#loading');
+				var $mybook_images	= $mybook.find('img');
+				var cnt_images		= $mybook_images.length;
+				var loaded			= 0;
+				 
+				$mybook_images.each(function(){
+					var $img 	= $(this);
+					var source	= $img.attr('src');
+					$('<img/>').load(function(){
+						++loaded;
+						if(loaded == cnt_images){
+							$loading.hide();
+							$bttn_next.show();
+							$bttn_prev.show();
+							$mybook.show().booklet({
+								name:               null,                            //  
+								width:              800,                             //  
+								height:             500,                             //   
+								speed:              600,                             //  
+								direction:          'LTR',                           //  
+								                           //  
+								next:               $bttn_next,          			//  
+								prev:               $bttn_prev,          			//  
+								                       
+							});
+							Cufon.refresh();
+						}
+					}).attr('src',source);
+				});
+				
+			});
+        </script>
+ 
+    </body>
+ 
+</html>
